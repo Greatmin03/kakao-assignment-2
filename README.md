@@ -17,7 +17,7 @@ ASSIGNMENT-2/
     ├── App.jsx             # 최상위 루트 컴포넌트 (비즈니스 로직 중심)
     ├── index.css           # 프로젝트 전역 스타일시트
     └── main.jsx            # React 렌더링 시작점 (Entry Point)
-
+```
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
