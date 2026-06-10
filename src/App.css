@@ -1,0 +1,498 @@
+/* =========================
+   공통 초기화
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   페이지
+   ========================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f5f6fa;
+
+    min-height: 100vh;
+
+    padding: 50px 20px;
+}
+
+/* =========================
+   앱 컨테이너
+   ========================= */
+
+.app-container {
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    background-color: white;
+
+    border-radius: 16px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 8px 24px
+        rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   제목
+   ========================= */
+
+.app-title {
+    text-align: center;
+
+    color: #672be0;
+
+    margin-bottom: 25px;
+}
+
+/* =========================
+   날짜 네비게이션
+   ========================= */
+
+.date-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+.date-button {
+
+    border: none;
+
+    background-color: #672be0;
+
+    color: white;
+
+    padding: 10px 14px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.date-text {
+
+    color: #672be0;
+
+    min-width: 140px;
+
+    text-align: center;
+}
+
+/* =========================
+   입력 영역
+   ========================= */
+
+.todo-input-container {
+    display: flex;
+
+    gap: 10px;
+}
+
+.todo-input-container input {
+    flex: 1;
+
+    padding: 12px;
+
+    border: 2px solid #e5e5e5;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 16px;
+}
+
+.todo-input-container input:focus {
+    border-color: #672be0;
+}
+
+.todo-input-container button {
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #672be0;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+/* =========================
+   메시지
+   ========================= */
+
+.message-box {
+    margin-top: 12px;
+
+    min-height: 20px;
+
+    color: #e74c3c;
+
+    font-size: 14px;
+}
+
+/* =========================
+   필터
+   ========================= */
+
+.filter-container {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 20px;
+
+    margin-bottom: 20px;
+}
+
+.filter-button {
+
+    flex: 1;
+
+    padding: 10px;
+
+    border: 1px solid #dcdcdc;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.active-filter {
+
+    background-color: #672be0;
+
+    color: white;
+
+    border-color: #672be0;
+}
+
+/* =========================
+   Todo 목록
+   ========================= */
+
+.todo-list {
+    list-style: none;
+
+    margin-top: 20px;
+}
+
+/* =========================
+   Todo 카드
+   ========================= */
+
+.todo-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 14px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #ececec;
+
+    border-radius: 10px;
+
+    background-color: #fafafa;
+}
+
+/* =========================
+   내용 영역
+   ========================= */
+
+.todo-content {
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+/* =========================
+   Todo 텍스트
+   ========================= */
+
+.todo-text {
+
+    display: block;
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    white-space: nowrap;
+
+    font-size: 16px;
+}
+
+/* =========================
+   완료 상태
+   ========================= */
+
+.completed {
+
+    text-decoration: line-through;
+
+    color: #888;
+}
+
+/* =========================
+   수정 입력창
+   ========================= */
+
+.edit-input {
+
+    width: 100%;
+
+    padding: 8px 12px;
+
+    border: 2px solid #672be0;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+/* =========================
+   버튼 영역
+   ========================= */
+
+.todo-actions {
+
+    display: flex;
+
+    gap: 6px;
+
+    flex-shrink: 0;
+}
+
+/* =========================
+   공통 버튼
+   ========================= */
+
+.action-button {
+
+    border: none;
+
+    padding: 8px 10px;
+
+    border-radius: 6px;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+/* =========================
+   수정 버튼
+   ========================= */
+
+.edit-button {
+
+    background-color: #3498db;
+}
+
+/* =========================
+   완료 버튼
+   ========================= */
+
+.complete-button {
+
+    background-color: #2ecc71;
+}
+
+/* =========================
+   삭제 버튼
+   ========================= */
+
+.delete-button {
+
+    background-color: #e74c3c;
+}
+
+/* =========================
+   주간 네비게이션
+   ========================= */
+
+.week-navigation-container {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.week-navigation-button {
+
+    border: none;
+
+    background-color: #672be0;
+
+    color: white;
+
+    padding: 10px 14px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.week-navigation-button:hover {
+
+    opacity: 0.9;
+}
+
+.week-range-text {
+
+    flex: 1;
+
+    text-align: center;
+
+    color: #672be0;
+
+    font-size: 18px;
+
+    font-weight: 600;
+}
+
+/* =========================
+   주간 날짜 카드
+   ========================= */
+
+.week-dates-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+}
+
+.week-date-card {
+
+    background-color: white;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 10px;
+
+    padding: 12px 8px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.week-date-card:hover {
+
+    border-color: #672be0;
+
+    transform:
+        translateY(-2px);
+}
+
+.week-day-name {
+
+    font-size: 12px;
+
+    color: #777;
+
+    margin-bottom: 6px;
+}
+
+.week-day-number {
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    margin-bottom: 6px;
+}
+
+.week-todo-count {
+
+    font-size: 12px;
+
+    color: #999;
+}
+
+/* =========================
+   선택 날짜
+   ========================= */
+
+.selected-date-card {
+
+    background-color: #672be0;
+
+    color: white;
+
+    border-color: #672be0;
+}
+
+.selected-date-card
+.week-day-name,
+
+.selected-date-card
+.week-todo-count {
+
+    color:
+      rgba(
+        255,
+        255,
+        255,
+        0.8
+      );
+}
+
+/* =========================
+   오늘 날짜
+   ========================= */
+
+.today-date-card {
+
+    box-shadow:
+      0 0 0 2px #672be0;
+}
